@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tvSeriesCell" rowHeight="229" id="TeD-LJ-PdD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tvSeriesCell" rowHeight="229" id="TeD-LJ-PdD" customClass="SeriesTableViewCell" customModule="Unit_3_Project_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="229"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TeD-LJ-PdD" id="vFm-1l-kMm">
@@ -72,6 +72,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shows" id="0Lt-e1-cbd"/>
+                    <connections>
+                        <outlet property="seriesSearchBar" destination="CYz-pH-M4u" id="UNC-F2-cZP"/>
+                        <outlet property="tvGuideTableView" destination="9X7-is-gLV" id="V2C-vn-CDT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +84,7 @@
         <!--Show Episode Directory View Controller-->
         <scene sceneID="L5p-Qe-gwR">
             <objects>
-                <viewController title="Show Episode Directory View Controller" id="MKn-oS-QeV" sceneMemberID="viewController">
+                <viewController title="Show Episode Directory View Controller" id="MKn-oS-QeV" customClass="EpisodeGuideViewController" customModule="Unit_3_Project_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xD-bS-peQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +93,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="episodeCell" rowHeight="173" id="Xcj-jO-swh" userLabel="Episode">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="episodeCell" rowHeight="173" id="Xcj-jO-swh" userLabel="Episode" customClass="EpisodeTableViewCell" customModule="Unit_3_Project_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xcj-jO-swh" id="Cuo-NW-T7b">
@@ -151,7 +155,7 @@
         <!--Episode Details View Controller-->
         <scene sceneID="r5z-R7-4tx">
             <objects>
-                <viewController title="Episode Details View Controller" id="Ati-PL-jmf" sceneMemberID="viewController">
+                <viewController title="Episode Details View Controller" id="Ati-PL-jmf" customClass="DetailsViewController" customModule="Unit_3_Project_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tpq-aR-eHC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

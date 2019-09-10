@@ -13,6 +13,10 @@
 		088439342327EAE000D47726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 088439332327EAE000D47726 /* Assets.xcassets */; };
 		088439372327EAE000D47726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 088439352327EAE000D47726 /* LaunchScreen.storyboard */; };
 		088439422327EAE100D47726 /* Unit_3_Project_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088439412327EAE100D47726 /* Unit_3_Project_2Tests.swift */; };
+		0884394E2328497B00D47726 /* EpisodeGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0884394D2328497B00D47726 /* EpisodeGuideViewController.swift */; };
+		088439502328498D00D47726 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0884394F2328498D00D47726 /* DetailsViewController.swift */; };
+		08843952232849B100D47726 /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08843951232849B100D47726 /* SeriesTableViewCell.swift */; };
+		08843954232849C000D47726 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08843953232849C000D47726 /* EpisodeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		0884393D2327EAE100D47726 /* Unit 3 Project 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit 3 Project 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		088439412327EAE100D47726 /* Unit_3_Project_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_3_Project_2Tests.swift; sourceTree = "<group>"; };
 		088439432327EAE100D47726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0884394D2328497B00D47726 /* EpisodeGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeGuideViewController.swift; sourceTree = "<group>"; };
+		0884394F2328498D00D47726 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		08843951232849B100D47726 /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
+		08843953232849C000D47726 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +85,8 @@
 		0884392B2327EAE000D47726 /* Unit 3 Project 2 */ = {
 			isa = PBXGroup;
 			children = (
-				0884392E2327EAE000D47726 /* TVDirectoryViewController.swift */,
+				0884394C2328495000D47726 /* View Controllers */,
+				08843955232849C400D47726 /* Views */,
 				088439302327EAE000D47726 /* Main.storyboard */,
 				088439332327EAE000D47726 /* Assets.xcassets */,
 				0884392C2327EAE000D47726 /* AppDelegate.swift */,
@@ -94,6 +103,25 @@
 				088439432327EAE100D47726 /* Info.plist */,
 			);
 			path = "Unit 3 Project 2Tests";
+			sourceTree = "<group>";
+		};
+		0884394C2328495000D47726 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0884392E2327EAE000D47726 /* TVDirectoryViewController.swift */,
+				0884394D2328497B00D47726 /* EpisodeGuideViewController.swift */,
+				0884394F2328498D00D47726 /* DetailsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		08843955232849C400D47726 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08843951232849B100D47726 /* SeriesTableViewCell.swift */,
+				08843953232849C000D47726 /* EpisodeTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0884394E2328497B00D47726 /* EpisodeGuideViewController.swift in Sources */,
 				0884392F2327EAE000D47726 /* TVDirectoryViewController.swift in Sources */,
+				08843952232849B100D47726 /* SeriesTableViewCell.swift in Sources */,
+				08843954232849C000D47726 /* EpisodeTableViewCell.swift in Sources */,
 				0884392D2327EAE000D47726 /* AppDelegate.swift in Sources */,
+				088439502328498D00D47726 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
