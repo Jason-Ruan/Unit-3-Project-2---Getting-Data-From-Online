@@ -13,7 +13,7 @@
         <!--TV Directory View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="TV Directory View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="Unit_3_Project_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TV Directory View Controller" id="BYZ-38-t0r" customClass="TVDirectoryViewController" customModule="Unit_3_Project_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
-        <!--Show Details View Controller-->
+        <!--Show Episode Directory View Controller-->
         <scene sceneID="L5p-Qe-gwR">
             <objects>
-                <viewController title="Show Details View Controller" id="MKn-oS-QeV" sceneMemberID="viewController">
+                <viewController title="Show Episode Directory View Controller" id="MKn-oS-QeV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xD-bS-peQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="1821.7391304347827" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Episode Details View Controller-->
         <scene sceneID="r5z-R7-4tx">
             <objects>
-                <viewController id="Ati-PL-jmf" sceneMemberID="viewController">
+                <viewController title="Episode Details View Controller" id="Ati-PL-jmf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tpq-aR-eHC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
