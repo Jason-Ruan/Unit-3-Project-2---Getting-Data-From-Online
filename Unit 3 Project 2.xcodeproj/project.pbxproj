@@ -77,10 +77,10 @@
 		0884392B2327EAE000D47726 /* Unit 3 Project 2 */ = {
 			isa = PBXGroup;
 			children = (
-				0884392C2327EAE000D47726 /* AppDelegate.swift */,
 				0884392E2327EAE000D47726 /* ViewController.swift */,
 				088439302327EAE000D47726 /* Main.storyboard */,
 				088439332327EAE000D47726 /* Assets.xcassets */,
+				0884392C2327EAE000D47726 /* AppDelegate.swift */,
 				088439352327EAE000D47726 /* LaunchScreen.storyboard */,
 				088439382327EAE000D47726 /* Info.plist */,
 			);
