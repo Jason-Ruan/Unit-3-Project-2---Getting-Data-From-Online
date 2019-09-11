@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct TVSeriesWrapper: Codable {
-    let series: [Series]
-}
-
 struct Series: Codable {
     let id: Int
     let name: String
@@ -20,7 +16,7 @@ struct Series: Codable {
     let image: ImageWrapper
     
     struct RatingWrapper: Codable {
-        let average: Double
+        let average: Double?
     }
     
 }

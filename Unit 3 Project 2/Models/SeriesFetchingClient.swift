@@ -20,8 +20,8 @@ class SeriesFetchingClient {
                 completionHandler(.failure(.noDataError))
             case .success(let data):
                 do {
-                    let tvSeriesDirectory = try JSONDecoder().decode(TVSeriesWrapper.self, from: data)
-                    completionHandler(.success(tvSeriesDirectory.series))
+                    let tvSeriesDirectory = try JSONDecoder().decode([Series].self, from: data)
+                    completionHandler(.success(tvSeriesDirectory))
                 } catch {
                     completionHandler(.failure(.badJSONError))
                 }
