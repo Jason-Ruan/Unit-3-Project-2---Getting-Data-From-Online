@@ -10,7 +10,14 @@ import UIKit
 
 class EpisodeGuideViewController: UIViewController, UITableViewDataSource {
     
-
+    var chosenSeriesEpisodes: [ShowEpisodes]! {
+        didSet {
+            DispatchQueue.main.async {
+                self.showTableView.reloadData()
+            }
+        }
+    }
+    
     @IBOutlet weak var showTableView: UITableView!
     
     override func viewDidLoad() {
