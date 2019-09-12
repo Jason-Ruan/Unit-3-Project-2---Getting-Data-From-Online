@@ -10,40 +10,25 @@ import UIKit
 
 class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
+    //MARK: -- Properties
     var tvDirectory: [Series] = [] {
         didSet {
             tvGuideTableView.reloadData()
         }
     }
     
-    //MARK: IBOutlets
+    //MARK: -- IBOutlets
     @IBOutlet weak var tvGuideTableView: UITableView!
     @IBOutlet weak var seriesSearchBar: UISearchBar!
     
+    //MARK: -- LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTVDirectory()
         loadSeries()
     }
     
-    func configureTVDirectory() {
-        tvGuideTableView.dataSource = self
-        seriesSearchBar.delegate = self
-    }
-    
-    func loadSeries() {
-        SeriesFetchingClient.manager.getSeries { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .failure(let error):
-                    print(error)
-                case .success(let allTVSeries):
-                    self.tvDirectory = allTVSeries
-                }
-            }
-        }
-    }
-    
+    //MARK: -- DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tvDirectory.count
     }
@@ -67,6 +52,25 @@ class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISear
         }
         
         return cell
+    }
+    
+    //MARK: -- Custom Functions
+    func configureTVDirectory() {
+        tvGuideTableView.dataSource = self
+        seriesSearchBar.delegate = self
+    }
+    
+    func loadSeries() {
+        SeriesFetchingClient.manager.getSeries { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let allTVSeries):
+                    self.tvDirectory = allTVSeries
+                }
+            }
+        }
     }
     
 }
