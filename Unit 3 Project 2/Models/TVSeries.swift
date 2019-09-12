@@ -21,10 +21,6 @@ struct Series: Codable {
     
 }
 
-struct ShowEpisodesWrapper: Codable {
-    let show: [ShowEpisodes]
-}
-
 struct ShowEpisodes: Codable {
     let name: String
     let season: Int
