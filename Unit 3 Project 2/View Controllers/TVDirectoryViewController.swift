@@ -11,11 +11,35 @@ import UIKit
 class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     //MARK: -- Properties
-    var tvDirectory: [Series] = [] {
+    var tvDirectory: [Series] = []
+    
+    var userSearchString = String() {
+        didSet {
+            if self.userSearchString == "" {
+                filteredTVDirectory = tvDirectory
+            } else if self.userSearchString.count >= 1 {
+                SeriesFetchingClient.manager.getQuerySearch(searchEntry: self.userSearchString) { (result) in
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .failure(let error):
+                            print(error)
+                        case .success(let searchedSeriesByQuery):
+                            self.filteredTVDirectory = searchedSeriesByQuery
+                        }
+                    }
+                }
+            } else {
+                filteredTVDirectory = tvDirectory
+            }
+        }
+    }
+    
+    var filteredTVDirectory: [Series] = [] {
         didSet {
             tvGuideTableView.reloadData()
         }
     }
+    
     
     //MARK: -- IBOutlets
     @IBOutlet weak var tvGuideTableView: UITableView!
