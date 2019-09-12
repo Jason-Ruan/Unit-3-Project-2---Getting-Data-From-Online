@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
-        <!--Show Episode Directory View Controller-->
+        <!--Episodes-->
         <scene sceneID="L5p-Qe-gwR">
             <objects>
-                <viewController title="Show Episode Directory View Controller" id="MKn-oS-QeV" customClass="EpisodeGuideViewController" customModule="Unit_3_Project_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Episodes" id="MKn-oS-QeV" customClass="EpisodeGuideViewController" customModule="Unit_3_Project_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xD-bS-peQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,37 +107,41 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bdi-U8-l8v">
-                                                    <rect key="frame" x="20" y="7" width="227.5" height="158.5"/>
+                                                    <rect key="frame" x="20" y="7" width="207" height="159"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="bdi-U8-l8v" secondAttribute="height" multiplier="217:151" id="8UQ-uS-YzW"/>
+                                                        <constraint firstAttribute="width" secondItem="bdi-U8-l8v" secondAttribute="height" multiplier="69:53" id="e1M-NQ-kL2"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-mX-2is">
-                                                    <rect key="frame" x="309" y="58" width="34" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-mX-2is">
+                                                    <rect key="frame" x="249" y="59" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season and Episode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJd-fH-6ci">
-                                                    <rect key="frame" x="249" y="94" width="155" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season and Episode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJd-fH-6ci">
+                                                    <rect key="frame" x="249" y="98" width="155" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bdi-U8-l8v" firstAttribute="width" secondItem="Cuo-NW-T7b" secondAttribute="width" multiplier="0.55" id="2HW-qG-O7H"/>
-                                                <constraint firstItem="Z5f-mX-2is" firstAttribute="top" secondItem="Cuo-NW-T7b" secondAttribute="top" constant="58" id="EPz-Tw-DuF"/>
-                                                <constraint firstItem="bdi-U8-l8v" firstAttribute="leading" secondItem="Cuo-NW-T7b" secondAttribute="leading" constant="20" id="FQ7-5F-Kfi"/>
-                                                <constraint firstItem="zJd-fH-6ci" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bdi-U8-l8v" secondAttribute="trailing" constant="1.5" id="GX3-vn-7uN"/>
-                                                <constraint firstItem="zJd-fH-6ci" firstAttribute="top" secondItem="Z5f-mX-2is" secondAttribute="bottom" constant="15" id="Sbv-JW-Mv8"/>
-                                                <constraint firstAttribute="trailing" secondItem="Z5f-mX-2is" secondAttribute="trailing" constant="71" id="TXf-sE-WsU"/>
-                                                <constraint firstItem="Z5f-mX-2is" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bdi-U8-l8v" secondAttribute="trailing" constant="8" symbolic="YES" id="YZV-3V-a5q"/>
-                                                <constraint firstAttribute="trailing" secondItem="zJd-fH-6ci" secondAttribute="trailing" constant="10" id="pcW-NB-3LY"/>
-                                                <constraint firstItem="bdi-U8-l8v" firstAttribute="centerY" secondItem="Cuo-NW-T7b" secondAttribute="centerY" id="vfE-os-9Mc"/>
+                                                <constraint firstItem="bdi-U8-l8v" firstAttribute="centerY" secondItem="Cuo-NW-T7b" secondAttribute="centerY" id="1uO-5u-oP5"/>
+                                                <constraint firstItem="bdi-U8-l8v" firstAttribute="width" secondItem="Cuo-NW-T7b" secondAttribute="width" multiplier="0.5" id="3Tt-Eb-5JZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z5f-mX-2is" secondAttribute="trailing" constant="10" id="FoS-4V-UX1"/>
+                                                <constraint firstItem="Z5f-mX-2is" firstAttribute="top" secondItem="Cuo-NW-T7b" secondAttribute="top" constant="59" id="MsW-Qm-axj"/>
+                                                <constraint firstItem="bdi-U8-l8v" firstAttribute="leading" secondItem="Cuo-NW-T7b" secondAttribute="leading" constant="20" id="Qqc-Wd-kpv"/>
+                                                <constraint firstItem="zJd-fH-6ci" firstAttribute="top" secondItem="Z5f-mX-2is" secondAttribute="bottom" constant="18" id="Sbv-JW-Mv8"/>
+                                                <constraint firstItem="zJd-fH-6ci" firstAttribute="leading" secondItem="bdi-U8-l8v" secondAttribute="trailing" constant="22" id="ZNS-wU-nZE"/>
+                                                <constraint firstAttribute="trailing" secondItem="zJd-fH-6ci" secondAttribute="trailing" constant="10" id="h3R-wd-9kE"/>
+                                                <constraint firstAttribute="bottom" secondItem="zJd-fH-6ci" secondAttribute="bottom" constant="56.5" id="nqg-Pe-Xd4"/>
+                                                <constraint firstItem="Z5f-mX-2is" firstAttribute="leading" secondItem="bdi-U8-l8v" secondAttribute="trailing" constant="22" id="sug-sZ-2aN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="episodeImage" destination="bdi-U8-l8v" id="StT-pa-Wav"/>
+                                            <outlet property="episodeSeasonAndEpisodeLabel" destination="zJd-fH-6ci" id="cqA-1n-r51"/>
+                                            <outlet property="episodeTitleLabel" destination="Z5f-mX-2is" id="go5-xQ-2H0"/>
                                             <segue destination="Ati-PL-jmf" kind="show" identifier="episodeDetailsSegue" id="R6S-bK-Afv"/>
                                         </connections>
                                     </tableViewCell>
@@ -154,7 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="4Fr-qt-RNU"/>
                     </view>
                     <connections>
-                        <outlet property="showTableView" destination="lO6-l4-3bM" id="tZ9-ch-kQq"/>
+                        <outlet property="showTableView" destination="lO6-l4-3bM" id="mpi-zW-XEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDL-TH-djT" userLabel="First Responder" sceneMemberID="firstResponder"/>

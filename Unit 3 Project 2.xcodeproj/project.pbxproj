@@ -142,8 +142,8 @@
 			children = (
 				0884395823284DAB00D47726 /* TVSeries.swift */,
 				0884395A23294BF400D47726 /* AppError.swift */,
-				0884395C23294CE700D47726 /* NetworkHelper.swift */,
 				0884395E232986A600D47726 /* ImageHelper.swift */,
+				0884395C23294CE700D47726 /* NetworkHelper.swift */,
 				0884395623284CEE00D47726 /* SeriesFetchingClient.swift */,
 				08843961232A869100D47726 /* EpisodesFetchingClient.swift */,
 			);
@@ -427,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7Q76CBS9B;
 				INFOPLIST_FILE = "Unit 3 Project 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,6 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7Q76CBS9B;
 				INFOPLIST_FILE = "Unit 3 Project 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
