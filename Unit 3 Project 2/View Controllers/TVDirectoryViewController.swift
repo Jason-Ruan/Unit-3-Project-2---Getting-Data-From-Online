@@ -54,7 +54,7 @@ class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISear
     
     //MARK: -- DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tvDirectory.count
+        return filteredTVDirectory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,15 +62,17 @@ class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISear
             print("Could not downcast as SeriesTableViewCell")
             return UITableViewCell()
         }
-        let show = tvDirectory[indexPath.row]
+        let show = filteredTVDirectory[indexPath.row]
         cell.seriesTitle.text = show.name
-        ImageHelper.manager.getImage(imageURL: show.image.mediumImage) { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .failure(let error):
-                    print(error)
-                case .success(let showImage):
-                    cell.seriesImage.image = showImage
+        if let imageURL = show.image?.mediumImage {
+            ImageHelper.manager.getImage(imageURL: imageURL) { (result) in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let showImage):
+                        cell.seriesImage.image = showImage
+                    }
                 }
             }
         }
@@ -92,8 +94,35 @@ class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISear
                     print(error)
                 case .success(let allTVSeries):
                     self.tvDirectory = allTVSeries
+                    self.filteredTVDirectory = allTVSeries
                 }
             }
+        }
+    }
+    
+    //MARK: -- Delegate Methods
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.userSearchString = searchText.lowercased()
+    }
+    
+    //MARK: -- Segue Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { return }
+        switch segueIdentifier {
+        case "showDetailsSegue":
+            guard let showSeriesVC = segue.destination as? EpisodeGuideViewController else { return }
+            guard let selectedCellPath = tvGuideTableView.indexPathForSelectedRow else { return }
+            EpisodesFetchingClient.manager.getShowEpisodes(showID: filteredTVDirectory[selectedCellPath.row].id) { (result) in
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let showEpisodes):
+                    showSeriesVC.chosenSeriesEpisodes = showEpisodes
+                }
+            }
+        default:
+            return
+            
         }
     }
     
