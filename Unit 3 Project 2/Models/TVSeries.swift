@@ -8,12 +8,16 @@
 
 import Foundation
 
+struct SeriesWrapper: Codable {
+    let show: Series
+}
+
 struct Series: Codable {
     let id: Int
     let name: String
     let summary: String
     let rating: RatingWrapper
-    let image: ImageWrapper
+    let image: ImageWrapper?
     
     struct RatingWrapper: Codable {
         let average: Double?
@@ -26,7 +30,7 @@ struct ShowEpisodes: Codable {
     let season: Int
     let episode: Int
     let summary: String
-    let image: ImageWrapper
+    let image: ImageWrapper?
     
     private enum CodingKeys: String, CodingKey {
         case name
