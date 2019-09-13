@@ -15,7 +15,7 @@ struct SeriesWrapper: Codable {
 struct Series: Codable {
     let id: Int
     let name: String
-    let summary: String
+    let summary: String?
     let rating: RatingWrapper
     let image: ImageWrapper?
     
@@ -29,7 +29,7 @@ struct ShowEpisodes: Codable {
     let name: String
     let season: Int
     let episode: Int
-    let summary: String
+    let summary: String?
     let image: ImageWrapper?
     
     private enum CodingKeys: String, CodingKey {
