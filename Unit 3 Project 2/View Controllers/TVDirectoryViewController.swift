@@ -64,6 +64,7 @@ class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISear
         }
         let show = filteredTVDirectory[indexPath.row]
         cell.seriesTitle.text = show.name
+        cell.ratingsLabel.text = "Rating: \(show.rating.average?.description ?? "N/A")"
         if let imageURL = show.image?.mediumImage {
             ImageHelper.manager.getImage(imageURL: imageURL) { (result) in
                 DispatchQueue.main.async {
