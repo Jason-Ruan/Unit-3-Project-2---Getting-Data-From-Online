@@ -103,7 +103,7 @@ class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISear
     
     //MARK: -- Delegate Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.userSearchString = searchText.lowercased()
+        self.userSearchString = searchText.lowercased().replacingOccurrences(of: " ", with: "-")
     }
     
     //MARK: -- Segue Methods
@@ -119,6 +119,7 @@ class TVDirectoryViewController: UIViewController, UITableViewDataSource, UISear
                     print(error)
                 case .success(let showEpisodes):
                     showSeriesVC.chosenSeriesEpisodes = showEpisodes
+                    showSeriesVC.chosenSeriesName = self.filteredTVDirectory[selectedCellPath.row].name
                 }
             }
         default:

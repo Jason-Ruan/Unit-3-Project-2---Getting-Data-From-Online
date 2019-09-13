@@ -12,6 +12,7 @@ class SeriesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var seriesImage: UIImageView!
     @IBOutlet weak var seriesTitle: UILabel!
+    @IBOutlet weak var ratingsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
