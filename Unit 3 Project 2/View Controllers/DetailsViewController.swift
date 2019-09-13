@@ -9,7 +9,16 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
+    var episode: ShowEpisodes!
+    
+    //MARK: IBOutlets
+    @IBOutlet weak var episodeImage: UIImageView!
+    @IBOutlet weak var episodeTitleLabel: UILabel!
+    @IBOutlet weak var episodeSeasonAndEpisodeLabel: UILabel!
+    @IBOutlet weak var episodeSummaryTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
