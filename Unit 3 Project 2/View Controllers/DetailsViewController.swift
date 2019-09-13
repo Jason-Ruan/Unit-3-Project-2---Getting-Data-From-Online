@@ -21,19 +21,25 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpDetailsViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setUpDetailsViews() {
+        episodeTitleLabel.text = episode.name
+        episodeSeasonAndEpisodeLabel.text = "Season: \(episode.season)  Episode: \(episode.episode)"
+        episodeSummaryTextView.text = episode.summary
+        if let imageURL = episode.image?.originalImage {
+            ImageHelper.manager.getImage(imageURL: imageURL) { (result) in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let imageForEpisode):
+                        self.episodeImage.image = imageForEpisode
+                    }
+                }
+            }
+        }
     }
-    */
-
+    
 }
