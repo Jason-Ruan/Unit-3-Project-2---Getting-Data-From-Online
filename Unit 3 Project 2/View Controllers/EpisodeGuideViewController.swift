@@ -62,8 +62,17 @@ class EpisodeGuideViewController: UIViewController, UITableViewDataSource {
     }
     
     // MARK: - Navigation
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
-    //    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { return }
+        switch segueIdentifier {
+        case "episodeDetailsSegue":
+            guard let detailsVC = segue.destination as? DetailsViewController else { return }
+            guard let selectedCellPath = showTableView.indexPathForSelectedRow else { return }
+            detailsVC.episode = chosenSeriesEpisodes[selectedCellPath.row]
+        default:
+            return
+            
+        }
+    }
     
 }
