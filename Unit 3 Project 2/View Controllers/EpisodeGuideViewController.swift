@@ -10,6 +10,7 @@ import UIKit
 
 class EpisodeGuideViewController: UIViewController, UITableViewDataSource {
     
+    var chosenSeriesName: String!
     var chosenSeriesEpisodes: [ShowEpisodes]! {
         didSet {
             DispatchQueue.main.async {
